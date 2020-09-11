@@ -5,7 +5,7 @@ import web.model.User;
 
 import java.util.List;
 @Component
-public interface service {
+public interface UserService {
     List<User> allUsers();
     void add(User user);
     void delete(User user);

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import web.model.User;
-import web.service.service;
+import web.service.UserService;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import java.util.List;
 public class UserController {
     @Qualifier("userServiceImpl")
     @Autowired
-    service userService;
+    private UserService userService;
 
     @GetMapping(name = "/")
     public String getList(Model model) {

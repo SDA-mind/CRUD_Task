@@ -5,7 +5,7 @@ import web.model.User;
 
 import java.util.List;
 @Component
-public interface dao {
+public interface UserDao {
     List<User> allUsers();
     void add(User user);
     void delete(User user);

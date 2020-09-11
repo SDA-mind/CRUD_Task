@@ -4,17 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import web.dao.UserDaoImpl;
-import web.dao.dao;
+import web.dao.UserDao;
 import web.model.User;
 
 import java.util.List;
 @Service
 @Transactional
-public class UserServiceImpl implements service {
+public class UserUserServiceImpl implements UserService {
     @Qualifier("userDaoImpl")
     @Autowired
-    dao userDao;
+    private UserDao userDao;
 
     @Override
     public List<User> allUsers() {
@@ -39,5 +38,10 @@ public class UserServiceImpl implements service {
     @Override
     public User getById(int id) {
         return userDao.getById(id);
+    }
+
+    @Override
+    public User getByName(String name) {
+        return null;
     }
 }
